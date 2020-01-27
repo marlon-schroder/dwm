@@ -41,8 +41,6 @@ static const Rule rules[] = {
 	{ "XCalc",				NULL,		NULL,		0,				True,		-1 },
 	{ "St",					NULL,		NULL,		1 << 0,			False,		-1 },
 	{ "Google-chrome",		NULL,		NULL,		1 << 1,			False,		-1 },
-	{ "Firefox",			NULL,		NULL,		1 << 1,			False,		-1 },
-	{ "qutebrowser",		NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Chromium",			NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Min",				NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Nemo",				NULL,		NULL,		1 << 2,			False,		-1 },
