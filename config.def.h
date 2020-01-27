@@ -8,13 +8,8 @@ static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=11", };
 static const char col_gray1[]       = "#222222";
-static const char col_gray2[]       = "#444444";
-static const char col_gray3[]       = "#bbbbbb";
-static const char col_gray4[]       = "#eeeeee";
 static const char col_cyan[]        = "#005577";
-static const char col_black[]       = "#000000";
 static const char col_red[]         = "#ff0000";
-static const char col_yellow[]      = "#ffff00";
 static const char col_white[]       = "#ffffff";
 
 static const char normbordercolor[]	= "#555555";
@@ -28,9 +23,9 @@ static const char *colors[][3]      = {
 	/*					fg				bg				border   */
 	[SchemeNorm]	= { normfgcolor,	normbgcolor,	normbordercolor },
 	[SchemeSel]		= { selfgcolor,		selbgcolor,		selbordercolor },
-	[SchemeWarn]	= { col_black,		col_yellow,		col_red },
+	[SchemeWarn]	= { normfgcolor,	selbgcolor,		selbgcolor },
 	[SchemeUrgent]	= { col_white,		col_red,		col_red },
-	[SchemeHid]		= { col_cyan,		col_gray1,		col_cyan  },
+	[SchemeHid]		= { normfgcolor,	normbgcolor,	normbordercolor },
 };
 
 /* tagging ﯇ */
@@ -42,12 +37,10 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class				instance	title		tags mask		floating	monitor */
-	{ "Gimp",				NULL,		NULL,		0,				1,			-1 },
-	{ "Firefox",			NULL,       NULL,       1 << 8,			0,			-1 },
+	{ "Gimp",				NULL,		NULL,		0,				True,		-1 },
+	{ "XCalc",				NULL,		NULL,		0,				True,		-1 },
 	{ "St",					NULL,		NULL,		1 << 0,			False,		-1 },
 	{ "Google-chrome",		NULL,		NULL,		1 << 1,			False,		-1 },
-	{ "Firefox",			NULL,		NULL,		1 << 1,			False,		-1 },
-	{ "qutebrowser",		NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Chromium",			NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Min",				NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Nemo",				NULL,		NULL,		1 << 2,			False,		-1 },
@@ -189,11 +182,11 @@ static Key keys[] = {
 };
 
 /* ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, ClkRootWin */
-// Button1 (esquerdo)
-// Button2 (do meio)
-// Button3 (direito)
-// Button4 (scroll pra baixo)
-// Button5 (scroll pra cima)
+// Button1 (left)
+// Button2 (middle)
+// Button3 (right)
+// Button4 (scroll down)
+// Button5 (scroll up)
 static Button buttons[] = {
 	/* click			event mask	button		function		argument */
 	{ ClkWinTitle,		0,			Button1,	togglewin,		{0} },
