@@ -29,7 +29,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging ﯇ */
-static const char *tags[] = { " ", " ", " ", " ", " ", " ", " ", "", "" };
+static const char *tags[] = { " ", " ", " ", " ", " ", " ", " ", " ", " " };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -43,15 +43,16 @@ static const Rule rules[] = {
 	{ "Google-chrome",		NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Chromium",			NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Min",				NULL,		NULL,		1 << 1,			False,		-1 },
-	{ "Nemo",				NULL,		NULL,		1 << 2,			False,		-1 },
-	{ "Pcmanfm",			NULL,		NULL,		1 << 2,			False,		-1 },
-	{ "Sublime_text",		NULL,		NULL,		1 << 1,			False,		-1 },
-	{ "Transmission-gtk",	NULL,		NULL,		1 << 3,			False,		-1 },
-	{ "mpv",				NULL,		NULL,		1 << 4,			False,		-1 },
-	{ "qemu-system-x86_64",	NULL,		NULL,		1 << 5,			True,		-1 },
-	{ "kvm",				NULL,		NULL,		1 << 5,			True,		-1 },
-	{ "VirtualBox",			NULL,		NULL,		1 << 5,			False,		-1 },
-	{ "Steam",				NULL,		NULL,		1 << 6,			False,		-1 }
+	{ "Sublime_text",		NULL,		NULL,		1 << 2,			False,		-1 },
+	{ "Nemo",				NULL,		NULL,		1 << 3,			False,		-1 },
+	{ "Pcmanfm",			NULL,		NULL,		1 << 3,			False,		-1 },
+	{ "Transmission-gtk",	NULL,		NULL,		1 << 4,			False,		-1 },
+	{ "Steam",				NULL,		NULL,		1 << 5,			False,		-1 },
+	{ "mpv",				NULL,		NULL,		1 << 6,			False,		-1 },
+	{ "qemu-system-x86_64",	NULL,		NULL,		1 << 7,			True,		-1 },
+	{ "kvm",				NULL,		NULL,		1 << 7,			True,		-1 },
+	{ "VirtualBox",			NULL,		NULL,		1 << 7,			False,		-1 },
+	{ "DB Browser for SQLite",	NULL,		NULL,		1 << 8,			False,		-1 }
 };
 
 /* layout(s) */
