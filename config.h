@@ -29,7 +29,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging ﯇ */
-static const char *tags[] = { " ", " ", " ", " ", " ", " ", " ", " ", " " };
+static const char *tags[] = { " ", " ", " ", " ", " ", " ", " ", " ", " " };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -52,6 +52,7 @@ static const Rule rules[] = {
 	{ "qemu-system-x86_64",	NULL,		NULL,		1 << 7,			True,		-1 },
 	{ "kvm",				NULL,		NULL,		1 << 7,			True,		-1 },
 	{ "VirtualBox",			NULL,		NULL,		1 << 7,			False,		-1 },
+    { "Virt-manager",       NULL,       NULL,       1 << 7,         False,      -1 },
 	{ "DB Browser for SQLite",	NULL,		NULL,		1 << 8,			False,		-1 }
 };
 
@@ -140,8 +141,8 @@ static Key keys[] = {
 	{ MOD4,				XK_Page_Down,	setmfact,		{.f = -0.05} },		// diminui lateralmente
 	{ MOD4,				XK_Page_Up,		setmfact,		{.f = +0.05} },		// aumenta lateralmente
 	{ MOD4,				XK_z,		zoom,			{0} },
-	//{ MOD4,			XK_Tab,		view,			{0} },					// alterna entre workspace
-	{ MOD4,				XK_Tab,		focusstack,		{.i = +1 } },
+	{ MOD4,			    XK_Tab,		view,			{0} },					// alterna entre workspace
+	//{ MOD4,				XK_Tab,		focusstack,		{.i = +1 } },
 	{ MOD4,				XK_j,		focusstack,		{.i = +1 } },			// proxima janela
 	{ MOD1,				XK_Tab,		focusstack,		{.i = +1 } },
 	{ MOD4,				XK_k,		focusstack,		{.i = -1 } },			// janela anterior
