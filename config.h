@@ -28,8 +28,8 @@ static const char *colors[][3]      = {
 	[SchemeHid]		= { normfgcolor,	normbgcolor,	normbordercolor },
 };
 
-/* tagging ﯇ */
-static const char *tags[] = { " ", " ", " ", " ", " ", " ", " ", " ", " " };
+/* tagging ﯇  */
+static const char *tags[] = { " ", " ", " ", " ", " ", " ", " ", " ", " " };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -43,6 +43,7 @@ static const Rule rules[] = {
 	{ "Google-chrome",		NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Chromium",			NULL,		NULL,		1 << 1,			False,		-1 },
     { "Firefox",            NULL,       NULL,       1 << 1,         False,      -1 },
+    { "firefox",            NULL,       NULL,       1 << 1,         False,      -1 },
 	{ "Min",				NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Sublime_text",		NULL,		NULL,		1 << 2,			False,		-1 },
 	{ "Nemo",				NULL,		NULL,		1 << 3,			False,		-1 },
