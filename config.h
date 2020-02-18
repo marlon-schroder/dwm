@@ -1,7 +1,7 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
@@ -21,7 +21,7 @@ static const char selfgcolor[]		= "#ff5d73";
 
 static const char *colors[][3]      = {
 	/*					fg				bg				border   */
-	[SchemeNorm]	= { normfgcolor,	normbgcolor,	normbordercolor },
+	[SchemeNorm]	= { normfgcolor,	normbgcolor,	normbgcolor },
 	[SchemeSel]		= { selfgcolor,		selbgcolor,		selbordercolor },
 	[SchemeWarn]	= { normfgcolor,	selbgcolor,		selbgcolor },
 	[SchemeUrgent]	= { col_white,		col_red,		col_red },
