@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 20;        /* gaps between windows */
+static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -42,6 +42,7 @@ static const Rule rules[] = {
 	{ "St",					NULL,		NULL,		1 << 0,			False,		-1 },
 	{ "Google-chrome",		NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Chromium",			NULL,		NULL,		1 << 1,			False,		-1 },
+    { "Firefox",            NULL,       NULL,       1 << 1,         False,      -1 },
 	{ "Min",				NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Sublime_text",		NULL,		NULL,		1 << 2,			False,		-1 },
 	{ "Nemo",				NULL,		NULL,		1 << 3,			False,		-1 },
