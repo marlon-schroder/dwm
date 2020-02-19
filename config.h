@@ -46,6 +46,7 @@ static const Rule rules[] = {
     { "firefox",            NULL,       NULL,       1 << 1,         False,      -1 },
 	{ "Min",				NULL,		NULL,		1 << 1,			False,		-1 },
 	{ "Sublime_text",		NULL,		NULL,		1 << 2,			False,		-1 },
+    { "Code - OSS",         NULL,       NULL,       1 << 2,         False,      -1 },
 	{ "Nemo",				NULL,		NULL,		1 << 3,			False,		-1 },
 	{ "Pcmanfm",			NULL,		NULL,		1 << 3,			False,		-1 },
 	{ "Transmission-gtk",	NULL,		NULL,		1 << 4,			False,		-1 },
