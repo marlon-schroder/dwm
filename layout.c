@@ -1,5 +1,6 @@
 void
-grid(Monitor *m) {
+grid(Monitor *m)
+{
 	unsigned int i, n, cx, cy, cw, ch, aw, ah, cols, rows;
 	Client *c;
 
@@ -25,3 +26,4 @@ grid(Monitor *m) {
 		i++;
 	}
 }
+

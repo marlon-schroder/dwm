@@ -7,10 +7,6 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
 static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=11", };
-static const char col_gray1[]       = "#222222";
-static const char col_cyan[]        = "#005577";
-static const char col_red[]         = "#ff0000";
-static const char col_white[]       = "#ffffff";
 
 static const char normbordercolor[]	= "#555555";
 static const char normbgcolor[]		= "#eeeeee";
@@ -24,7 +20,7 @@ static const char *colors[][3]      = {
 	[SchemeNorm]	= { normfgcolor,	normbgcolor,	normbgcolor },
 	[SchemeSel]		= { selfgcolor,		selbgcolor,		selbordercolor },
 	[SchemeWarn]	= { normfgcolor,	selbgcolor,		selbgcolor },
-	[SchemeUrgent]	= { col_white,		col_red,		col_red },
+	[SchemeUrgent]	= { selfgcolor,		selbgcolor,		selbordercolor },
 	[SchemeHid]		= { normfgcolor,	normbgcolor,	normbordercolor },
 };
 
