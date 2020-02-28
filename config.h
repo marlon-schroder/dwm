@@ -6,6 +6,7 @@ static const unsigned int gappx     = 0;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const char buttonbar[]       = "";
 static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=11", };
 
 static const char normbordercolor[]	= "#555555";
@@ -191,6 +192,7 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click			event mask	button		function		argument */
 	{ ClkWinTitle,		0,			Button1,	togglewin,		{0} },
+	{ ClkButton,		0,			Button1,	spawn,			{.v = dmenucmd } },
 	{ ClkClientWin,		MOD4,		Button5,	setmfact,		{.f = +0.05} },		// aumenta lateralmente com scroll pra cima
 	{ ClkClientWin,		MOD4,		Button4,	setmfact,		{.f = -0.05} },		// diminui lateralmente com scroll pra baixo
 	{ ClkTagBar,		MOD4,		Button1,	tag,			{0} },				// manda janela para a workspace
