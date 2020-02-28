@@ -25,8 +25,8 @@ static const char *colors[][3]      = {
 	[SchemeHid]		= { normfgcolor,	normbgcolor,	normbordercolor },
 };
 
-/* ﯇  *   */
-static const char *tags[] = { " ", " ", " ", " ", " ", " ", " ", " ", " " };
+/* ﯇  *         */
+static const char *tags[] = { " ", " ", " ", " ﱮ", " ", " ", " ", " ", " " };
 
 static const Rule rules[] = {
 	/* xprop(1):
