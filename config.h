@@ -2,7 +2,7 @@
 
 /* appearance */
 static const unsigned int borderpx  = 2;        /* border pixel of windows */
-static const unsigned int gappx     = 0;        /* gaps between windows */
+static const unsigned int gappx     = 8;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
@@ -12,11 +12,11 @@ static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=11", 
 static const char normbordercolor[]	= "#555555";
 static const char normbgcolor[]		= "#F6F5F4";
 static const char normfgcolor[]		= "#31363d";
-static const char selbordercolor[]	= "#3584E4";
+static const char selbordercolor[]	= "#FF5D73";
 static const char selbgcolor[]		= "#F6F5F4";
-static const char selfgcolor[]		= "#3584E4";
+static const char selfgcolor[]		= "#FF5D73";
 
-/* FF5D73 */
+/* #FF5D73 #3584E4 */
 
 static const char *colors[][3]      = {
 	/*					fg				bg				border   */
