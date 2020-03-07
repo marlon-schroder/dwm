@@ -10,11 +10,13 @@ static const char buttonbar[]       = "";
 static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=11", };
 
 static const char normbordercolor[]	= "#555555";
-static const char normbgcolor[]		= "#eeeeee";
+static const char normbgcolor[]		= "#F6F5F4";
 static const char normfgcolor[]		= "#31363d";
-static const char selbordercolor[]	= "#ff5d73";
-static const char selbgcolor[]		= "#eeeeee";
-static const char selfgcolor[]		= "#ff5d73";
+static const char selbordercolor[]	= "#3584E4";
+static const char selbgcolor[]		= "#F6F5F4";
+static const char selfgcolor[]		= "#3584E4";
+
+/* FF5D73 */
 
 static const char *colors[][3]      = {
 	/*					fg				bg				border   */
