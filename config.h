@@ -46,9 +46,9 @@ static const char selfgcolor[]		= "#FF5D73";
 
 static const char *colors[][3]      = {
 	/*					fg				bg				border   */
-	[SchemeNorm]	= { normfgcolor,	normbgcolor,	normbgcolor },
+	[SchemeNorm]	= { normfgcolor,	normbgcolor,	normbordercolor },
 	[SchemeSel]		= { selfgcolor,		selbgcolor,		selbordercolor },
-	[SchemeWarn]	= { normfgcolor,	selbgcolor,		selbgcolor },
+	[SchemeWarn]	= { normfgcolor,	selbgcolor,		selbordercolor },
 	[SchemeUrgent]	= { selfgcolor,		selbgcolor,		selbordercolor },
 	[SchemeHid]		= { normfgcolor,	normbgcolor,	normbordercolor },
 };
@@ -61,29 +61,29 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class				instance	title		tags mask		floating	monitor */
-	{ "Gimp",				NULL,		NULL,		0,				True,		-1 },
-	{ "XCalc",				NULL,		NULL,		0,				True,		-1 },
-	{ "St",					NULL,		NULL,		1 << 0,			False,		-1 },
-	{ "Google-chrome",		NULL,		NULL,		1 << 1,			False,		-1 },
-	{ "Chromium",			NULL,		NULL,		1 << 1,			False,		-1 },
-    { "Firefox",            NULL,       NULL,       1 << 1,         False,      -1 },
-    { "firefox",            NULL,       NULL,       1 << 1,         False,      -1 },
-	{ "Min",				NULL,		NULL,		1 << 1,			False,		-1 },
-	{ "Sublime_text",		NULL,		NULL,		1 << 2,			False,		-1 },
-    { "Code - OSS",         NULL,       NULL,       1 << 2,         False,      -1 },
-    { "Gnome-calculator",	NULL,		NULL,		1 << 2,			True,		-1 },
-	{ "Nemo",				NULL,		NULL,		1 << 3,			False,		-1 },
-	{ "Pcmanfm",			NULL,		NULL,		1 << 3,			False,		-1 },
-	{ "Thunar",				NULL,		NULL,		1 << 3,			False,		-1 },
-	{ "Transmission-gtk",	NULL,		NULL,		1 << 4,			False,		-1 },
-	{ "Steam",				NULL,		NULL,		1 << 5,			False,		-1 },
-	{ "mpv",				NULL,		NULL,		1 << 6,			False,		-1 },
-	{ "qemu-system-x86_64",	NULL,		NULL,		1 << 7,			True,		-1 },
-	{ "kvm",				NULL,		NULL,		1 << 7,			True,		-1 },
-	{ "VirtualBox",			NULL,		NULL,		1 << 7,			False,		-1 },
-    { "Virt-manager",       NULL,       NULL,       1 << 7,         False,      -1 },
-	{ "DB Browser for SQLite",	NULL,		NULL,		1 << 8,			False,		-1 }
+	/* class      			instance    title       tags mask    	iscentered	isfloating	monitor */
+	{ "Gimp",				NULL,		NULL,		0,				1,			1,		-1 },
+	{ "XCalc",				NULL,		NULL,		0,				1,			1,		-1 },
+	{ "St",					NULL,		NULL,		1 << 0,			0,			0,		-1 },
+	{ "Google-chrome",		NULL,		NULL,		1 << 1,			0,			0,		-1 },
+	{ "Chromium",			NULL,		NULL,		1 << 1,			0,			0,		-1 },
+    { "Firefox",            NULL,       NULL,       1 << 1,         0,			0,      -1 },
+    { "firefox",            NULL,       NULL,       1 << 1,         0,			0,      -1 },
+	{ "Min",				NULL,		NULL,		1 << 1,			0,			0,		-1 },
+	{ "Sublime_text",		NULL,		NULL,		1 << 2,			0,			0,		-1 },
+    { "Code - OSS",         NULL,       NULL,       1 << 2,         0,			0,      -1 },
+    { "Gnome-calculator",	NULL,		NULL,		1 << 2,			1,			1,		-1 },
+	{ "Nemo",				NULL,		NULL,		1 << 3,			1,			1,		-1 },
+	{ "Pcmanfm",			NULL,		NULL,		1 << 3,			1,			1,		-1 },
+	{ "Thunar",				NULL,		NULL,		1 << 3,			1,			1,		-1 },
+	{ "Transmission-gtk",	NULL,		NULL,		1 << 4,			0,			0,		-1 },
+	{ "Steam",				NULL,		NULL,		1 << 5,			0,			0,		-1 },
+	{ "mpv",				NULL,		NULL,		1 << 6,			0,			0,		-1 },
+	{ "qemu-system-x86_64",	NULL,		NULL,		1 << 7,			1,			1,		-1 },
+	{ "kvm",				NULL,		NULL,		1 << 7,			1,			1,		-1 },
+	{ "VirtualBox",			NULL,		NULL,		1 << 7,			0,			0,		-1 },
+    { "Virt-manager",       NULL,       NULL,       1 << 7,         0,			0,      -1 },
+	{ "DB Browser for SQLite",	NULL,	NULL,		1 << 8,			0,			0,		-1 },
 };
 
 /* layout(s) */
