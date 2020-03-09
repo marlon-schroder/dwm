@@ -7,7 +7,7 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char buttonbar[]       = "";
-static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=13", };
+static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=16", };
 
 static const char normbordercolor[]	= "#777777";
 static const char normbgcolor[]		= "#000000";
