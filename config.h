@@ -9,14 +9,14 @@ static const int topbar             = 0;        /* 0 means bottom bar */
 static const char buttonbar[]       = "";
 static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=13", };
 
-static const char normbordercolor[]	= "#999999";
+static const char normbordercolor[]	= "#777777";
 static const char normbgcolor[]		= "#000000";
-static const char normfgcolor[]		= "#999999";
+static const char normfgcolor[]		= "#777777";
 static const char selbordercolor[]	= "#FF5D73";
 static const char selbgcolor[]		= "#000000";
 static const char selfgcolor[]		= "#ffffff";
 
-static const unsigned int baralpha = 0xCC;
+static const unsigned int baralpha = 0xD9;
 static const unsigned int borderalpha = OPAQUE;
 
 static const unsigned int alphas[][3]      = {
@@ -37,11 +37,11 @@ static const char selfgcolor[]		= "#FF5D73";
 /*
 #FF5D73
 #3584E4
+95% - F2
+90% - E6
+85% - D9
 80% - CC
 75% - BF
-70% - B3
-65% - A6
-60% - 99
 */
 
 static const char *colors[][3]      = {
