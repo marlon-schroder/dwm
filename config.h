@@ -5,18 +5,44 @@ static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int gappx     = 8;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
 static const char buttonbar[]       = "";
-static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=11", };
+static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=13", };
 
+static const char normbordercolor[]	= "#999999";
+static const char normbgcolor[]		= "#000000";
+static const char normfgcolor[]		= "#999999";
+static const char selbordercolor[]	= "#FF5D73";
+static const char selbgcolor[]		= "#000000";
+static const char selfgcolor[]		= "#ffffff";
+
+static const unsigned int baralpha = 0xCC;
+static const unsigned int borderalpha = OPAQUE;
+
+static const unsigned int alphas[][3]      = {
+	/*               fg      bg        border     */
+	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
+	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
+};
+
+/*
 static const char normbordercolor[]	= "#555555";
 static const char normbgcolor[]		= "#F6F5F4";
 static const char normfgcolor[]		= "#31363d";
 static const char selbordercolor[]	= "#FF5D73";
 static const char selbgcolor[]		= "#F6F5F4";
 static const char selfgcolor[]		= "#FF5D73";
+*/
 
-/* #FF5D73 #3584E4 */
+/*
+#FF5D73
+#3584E4
+80% - CC
+75% - BF
+70% - B3
+65% - A6
+60% - 99
+*/
 
 static const char *colors[][3]      = {
 	/*					fg				bg				border   */
@@ -28,7 +54,7 @@ static const char *colors[][3]      = {
 };
 
 /* ﯇  *         */
-static const char *tags[] = { " ", " ", " ", " ﱮ", " ", " ", " ", " ", " " };
+static const char *tags[] = { "  ", "  ", "  ", "  ﱮ", "  ", "  ", "  ", "  ", "  " };
 
 static const Rule rules[] = {
 	/* xprop(1):
