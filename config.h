@@ -76,6 +76,7 @@ static const Rule rules[] = {
 	{ "Nemo",				NULL,		NULL,		1 << 3,			0,			0,		-1 },
 	{ "Pcmanfm",			NULL,		NULL,		1 << 3,			0,			0,		-1 },
 	{ "Thunar",				NULL,		NULL,		1 << 3,			0,			0,		-1 },
+	{ "Org.gnome.Nautilus",	NULL,		NULL,		1 << 3,			0,			0,		-1 },
 	{ "Transmission-gtk",	NULL,		NULL,		1 << 4,			0,			0,		-1 },
 	{ "Steam",				NULL,		NULL,		1 << 5,			0,			0,		-1 },
 	{ "mpv",				NULL,		NULL,		1 << 6,			0,			0,		-1 },
@@ -118,6 +119,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *launchcmd[]		= { "launcher.sh", NULL };
 static const char *dmenucmd[]		= { "rox.sh", NULL };
 static const char *termcmd[]		= { "terminal.sh", NULL };
 static const char *lockcmd[]		= { "lock.sh", NULL };
@@ -147,7 +149,7 @@ static Key keys[] = {
 	{ MOD4,				XK_d,		spawn,			{.v = dmenucmd } },
 	{ MOD4,				XK_p,		spawn,			{.v = dmenucmd } },
 	//{ MOD4,			XK_w,		tabmode,		{-1} },
-	{ MOD4,				XK_space,	spawn,			{.v = dmenucmd } },
+	{ MOD4,				XK_space,	spawn,			{.v = launchcmd } },
 	{ MOD4,				XK_l,		spawn,			{.v = todo } },
 	{ MOD4,				XK_Delete,	spawn,			{.v = clipmenu } },
 	{ 0,				XK_F12,		spawn,			{.v = termcmd } },
