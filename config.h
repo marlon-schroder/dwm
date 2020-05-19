@@ -5,9 +5,9 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 8;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 0;        /* 0 means bottom bar */
+static const int topbar             = 1;        /* 0 means bottom bar */
 static const char buttonbar[]       = "";
-static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=16", };
+static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=13", };
 
 static const char normbordercolor[]	= "#777777";
 static const char normbgcolor[]		= "#000000";
