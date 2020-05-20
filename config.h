@@ -5,28 +5,29 @@ static const unsigned int borderpx  = 1;        /* border pixel of windows */
 static const unsigned int gappx     = 8;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
+static const int topbar             = 0;        /* 0 means bottom bar */
 static const char buttonbar[]       = "";
-static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=13", };
+static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=16", };
 
-/*
 static const char normbordercolor[]	= "#777777";
 static const char normbgcolor[]		= "#000000";
 static const char normfgcolor[]		= "#777777";
 static const char selbordercolor[]	= "#FF5D73";
 static const char selbgcolor[]		= "#000000";
 static const char selfgcolor[]		= "#ffffff";
+
+/*
+static const char normbordercolor[]	= "#555555";
+static const char normbgcolor[]		= "#e1e1e1";
+static const char normfgcolor[]		= "#363636";
+static const char selbordercolor[]	= "#5294e2";
+static const char selbgcolor[]		= "#e1e1e1";
+static const char selfgcolor[]		= "#5294e2";
 */
 
-static const char normbordercolor[]	= "#555555";
-static const char normbgcolor[]		= "#e8e8e8";
-static const char normfgcolor[]		= "#363636";
-static const char selbordercolor[]	= "#315ebf";
-static const char selbgcolor[]		= "#e8e8e8";
-static const char selfgcolor[]		= "#315ebf";
-
-// 0xCC
-static const unsigned int baralpha = 0xFF;
+// 0xCC com transparencia
+// 0xFF sem transparencia
+static const unsigned int baralpha = 0xCC;
 static const unsigned int borderalpha = OPAQUE;
 
 static const unsigned int alphas[][3]      = {
@@ -55,7 +56,7 @@ static const char *colors[][3]      = {
 	[SchemeHid]		= { normfgcolor,	normbgcolor,	normbordercolor },
 };
 
-/* ﯇  *          */
+/* ﯇  *           */
 static const char *tags[] = { "  ", "  ", "  ", "  ﱮ", "  ", "  ", "  ", "  ", "  " };
 
 static const Rule rules[] = {

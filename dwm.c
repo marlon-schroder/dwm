@@ -1747,7 +1747,7 @@ setup(void)
 		die("no fonts could be loaded.");
 	lrpad = drw->fonts->h;
 	// top bar size
-	bh = drw->fonts->h + 6;
+	bh = drw->fonts->h + 20;
 	updategeom();
 	/* init atoms */
 	utf8string = XInternAtom(dpy, "UTF8_STRING", False);
