@@ -9,14 +9,24 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char buttonbar[]       = "";
 static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=13", };
 
+/*
 static const char normbordercolor[]	= "#777777";
 static const char normbgcolor[]		= "#000000";
 static const char normfgcolor[]		= "#777777";
 static const char selbordercolor[]	= "#FF5D73";
 static const char selbgcolor[]		= "#000000";
 static const char selfgcolor[]		= "#ffffff";
+*/
 
-static const unsigned int baralpha = 0xCC;
+static const char normbordercolor[]	= "#555555";
+static const char normbgcolor[]		= "#e8e8e8";
+static const char normfgcolor[]		= "#363636";
+static const char selbordercolor[]	= "#315ebf";
+static const char selbgcolor[]		= "#e8e8e8";
+static const char selfgcolor[]		= "#315ebf";
+
+// 0xCC
+static const unsigned int baralpha = 0xFF;
 static const unsigned int borderalpha = OPAQUE;
 
 static const unsigned int alphas[][3]      = {
@@ -25,14 +35,6 @@ static const unsigned int alphas[][3]      = {
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
 
-/*
-static const char normbordercolor[]	= "#555555";
-static const char normbgcolor[]		= "#F6F5F4";
-static const char normfgcolor[]		= "#31363d";
-static const char selbordercolor[]	= "#FF5D73";
-static const char selbgcolor[]		= "#F6F5F4";
-static const char selfgcolor[]		= "#FF5D73";
-*/
 
 /*
 #FF5D73
@@ -224,7 +226,7 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click			event mask	button		function		argument */
 	{ ClkWinTitle,		0,			Button1,	togglewin,		{0} },
-	{ ClkButton,		0,			Button1,	spawn,			{.v = dmenucmd } },
+	{ ClkButton,		0,			Button1,	spawn,			{.v = launchcmd } },
 	{ ClkClientWin,		MOD4,		Button5,	setmfact,		{.f = +0.05} },		// aumenta lateralmente com scroll pra cima
 	{ ClkClientWin,		MOD4,		Button4,	setmfact,		{.f = -0.05} },		// diminui lateralmente com scroll pra baixo
 	{ ClkTagBar,		MOD4,		Button1,	tag,			{0} },				// manda janela para a workspace
