@@ -1,13 +1,13 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 8;        /* gaps between windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
+static const unsigned int gappx     = 16;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
 static const char buttonbar[]       = "";
-static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=16", };
+static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=13", };
 
 static const char normbordercolor[]	= "#777777";
 static const char normbgcolor[]		= "#000000";
@@ -56,8 +56,8 @@ static const char *colors[][3]      = {
 	[SchemeHid]		= { normfgcolor,	normbgcolor,	normbordercolor },
 };
 
-/* ﯇  *           */
-static const char *tags[] = { "  ", "  ", "  ", "  ﱮ", "  ", "  ", "  ", "  ", "  " };
+/* ﯇  *              */
+static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -127,7 +127,7 @@ static const char *dmenucmd[]		= { "rox.sh", NULL };
 static const char *termcmd[]		= { "terminal.sh", NULL };
 static const char *lockcmd[]		= { "lock.sh", NULL };
 static const char *scrotcmd[]		= { "popup.sh", "screenshot", NULL };
-static const char *actions[]		= { "actions.sh", NULL };
+static const char *powermenu[]		= { "powermenu.sh", NULL };
 static const char *todo[]			= { "todo.sh", NULL };
 static const char *clipmenu[]		= { "clipboard.sh", NULL };
 static const char *winviewcmd[]		= { "winview.sh", NULL };
@@ -158,7 +158,7 @@ static Key keys[] = {
 	{ 0,				XK_F12,		spawn,			{.v = termcmd } },
 	//{ 0,				XK_F12,		togglescratch,  {.v = scratchpadcmd } },
 	{ MOD4,				XK_Return,	spawn,			{.v = termcmd } },
-	{ MOD4,				XK_Escape,	spawn,			{.v = actions } },
+	{ MOD4,				XK_Escape,	spawn,			{.v = powermenu } },
 	{ MOD4,				XK_F7,		spawn,			{.v = off_monitor } },
 	{ MOD4,				XK_F5,		spawn,			{.v = down_bright } },
 	{ MOD4,				XK_F6,		spawn,			{.v = up_bright } },
