@@ -9,9 +9,9 @@ static const int topbar             = 1;        /* 0 means bottom bar */
 static const char buttonbar[]       = "";
 static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=13", };
 
-static const char normbordercolor[]	= "#777777";
+static const char normbordercolor[]	= "#999999";
 static const char normbgcolor[]		= "#000000";
-static const char normfgcolor[]		= "#777777";
+static const char normfgcolor[]		= "#ffffff";
 static const char selbordercolor[]	= "#FF5D73";
 static const char selbgcolor[]		= "#000000";
 static const char selfgcolor[]		= "#ffffff";
@@ -27,7 +27,7 @@ static const char selfgcolor[]		= "#5294e2";
 
 // 0xCC com transparencia
 // 0xFF sem transparencia
-static const unsigned int baralpha = 0xCC;
+static const unsigned int baralpha = 0x00;
 static const unsigned int borderalpha = OPAQUE;
 
 static const unsigned int alphas[][3]      = {
