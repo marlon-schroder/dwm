@@ -126,6 +126,7 @@ static const char *dmenucmd[]		= { "rofi", "-show", "combi", NULL };
 static const char *termcmd[]		= { "terminal.sh", NULL };
 static const char *lockcmd[]		= { "lock.sh", NULL };
 static const char *scrotcmd[]		= { "popup.sh", "screenshot", NULL };
+static const char *searchcmd[]		= { "rofi", "-modi", "search:rofi_search.sh", "-show", "search", NULL };
 //static const char *powermenu[]		= { "powermenu.sh", NULL };
 //static const char *todo[]			= { "todo.sh", NULL };
 static const char *clipmenu[]		= { "rofi_clipboard.sh", NULL };
@@ -152,6 +153,7 @@ static Key keys[] = {
 	{ MOD4,				XK_p,		spawn,			{.v = dmenucmd } },
 	//{ MOD4,			XK_w,		tabmode,		{-1} },
 	{ MOD4,				XK_space,	spawn,			{.v = dmenucmd } },
+	{ MOD4,				XK_space,	spawn,			{.v = searchcmd } },
 	//{ MOD4,				XK_l,		spawn,			{.v = todo } },
 	{ MOD4,				XK_Delete,	spawn,			{.v = clipmenu } },
 	{ 0,				XK_F12,		spawn,			{.v = termcmd } },
