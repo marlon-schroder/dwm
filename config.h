@@ -11,7 +11,7 @@ static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=13", 
 
 static const char normbordercolor[]	= "#999999";
 static const char normbgcolor[]		= "#000000";
-static const char normfgcolor[]		= "#ffffff";
+static const char normfgcolor[]		= "#999999";
 static const char selbordercolor[]	= "#FF5D73";
 static const char selbgcolor[]		= "#000000";
 static const char selfgcolor[]		= "#ffffff";
@@ -153,7 +153,7 @@ static Key keys[] = {
 	{ MOD4,				XK_p,		spawn,			{.v = dmenucmd } },
 	//{ MOD4,			XK_w,		tabmode,		{-1} },
 	{ MOD4,				XK_space,	spawn,			{.v = dmenucmd } },
-	{ MOD4,				XK_space,	spawn,			{.v = searchcmd } },
+	{ MOD4,				XK_f,		spawn,			{.v = searchcmd } },
 	//{ MOD4,				XK_l,		spawn,			{.v = todo } },
 	{ MOD4,				XK_Delete,	spawn,			{.v = clipmenu } },
 	{ 0,				XK_F12,		spawn,			{.v = termcmd } },
