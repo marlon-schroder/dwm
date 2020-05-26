@@ -5,7 +5,7 @@ static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const unsigned int gappx     = 16;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 0;        /* 0 means bottom bar */
+static const int topbar             = 1;        /* 0 means bottom bar */
 static const char buttonbar[]       = "";
 static const char *fonts[]          = { "Sans:size=11", "HackNerdFont:size=13", };
 
@@ -57,7 +57,7 @@ static const char *colors[][3]      = {
 };
 
 /* ﯇  *              */
-static const char *tags[] = { "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  ", "  " };
+static const char *tags[] = { "1  ", "2  ", "3  ", "4  ", "5  ", "6  ", "7  ", "8  ", "9  " };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -122,14 +122,13 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *launchcmd[]		= { "launcher.sh", NULL };
-static const char *dmenucmd[]		= { "rox.sh", NULL };
+static const char *dmenucmd[]		= { "rofi", "-show", "combi", NULL };
 static const char *termcmd[]		= { "terminal.sh", NULL };
 static const char *lockcmd[]		= { "lock.sh", NULL };
 static const char *scrotcmd[]		= { "popup.sh", "screenshot", NULL };
-static const char *powermenu[]		= { "powermenu.sh", NULL };
-static const char *todo[]			= { "todo.sh", NULL };
-static const char *clipmenu[]		= { "clipboard.sh", NULL };
+//static const char *powermenu[]		= { "powermenu.sh", NULL };
+//static const char *todo[]			= { "todo.sh", NULL };
+static const char *clipmenu[]		= { "rofi_clipboard.sh", NULL };
 static const char *winviewcmd[]		= { "winview.sh", NULL };
 static const char *killcmd[]		= { "kill.sh", NULL };
 static const char *monitorcmd[]		= { "monitor.sh", NULL };
@@ -152,13 +151,13 @@ static Key keys[] = {
 	{ MOD4,				XK_d,		spawn,			{.v = dmenucmd } },
 	{ MOD4,				XK_p,		spawn,			{.v = dmenucmd } },
 	//{ MOD4,			XK_w,		tabmode,		{-1} },
-	{ MOD4,				XK_space,	spawn,			{.v = launchcmd } },
-	{ MOD4,				XK_l,		spawn,			{.v = todo } },
+	{ MOD4,				XK_space,	spawn,			{.v = dmenucmd } },
+	//{ MOD4,				XK_l,		spawn,			{.v = todo } },
 	{ MOD4,				XK_Delete,	spawn,			{.v = clipmenu } },
 	{ 0,				XK_F12,		spawn,			{.v = termcmd } },
 	//{ 0,				XK_F12,		togglescratch,  {.v = scratchpadcmd } },
 	{ MOD4,				XK_Return,	spawn,			{.v = termcmd } },
-	{ MOD4,				XK_Escape,	spawn,			{.v = powermenu } },
+	//{ MOD4,				XK_Escape,	spawn,			{.v = powermenu } },
 	{ MOD4,				XK_F7,		spawn,			{.v = off_monitor } },
 	{ MOD4,				XK_F5,		spawn,			{.v = down_bright } },
 	{ MOD4,				XK_F6,		spawn,			{.v = up_bright } },
@@ -227,7 +226,7 @@ static Key keys[] = {
 static Button buttons[] = {
 	/* click			event mask	button		function		argument */
 	{ ClkWinTitle,		0,			Button1,	togglewin,		{0} },
-	{ ClkButton,		0,			Button1,	spawn,			{.v = launchcmd } },
+	{ ClkButton,		0,			Button1,	spawn,			{.v = dmenucmd } },
 	{ ClkClientWin,		MOD4,		Button5,	setmfact,		{.f = +0.05} },		// aumenta lateralmente com scroll pra cima
 	{ ClkClientWin,		MOD4,		Button4,	setmfact,		{.f = -0.05} },		// diminui lateralmente com scroll pra baixo
 	{ ClkTagBar,		MOD4,		Button1,	tag,			{0} },				// manda janela para a workspace
