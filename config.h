@@ -1,13 +1,13 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
-static const unsigned int gappx     = 16;        /* gaps between windows */
-static const unsigned int snap      = 32;       /* snap pixel */
-static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar             = 1;        /* 0 means bottom bar */
-static const char buttonbar[]       = "";
-static const char *fonts[]          = { "Sans:size=11", "Iosevka Nerd Font:size=12", };
+static const unsigned int borderpx	= 1;		/* border pixel of windows */
+static const unsigned int gappx		= 16;		 /* gaps between windows */
+static const unsigned int snap		= 32;		/* snap pixel */
+static const int showbar			= 1;		/* 0 means no bar */
+static const int topbar				= 1;		/* 0 means bottom bar */
+static const char buttonbar[]		= "";
+static const char *fonts[]			= { "Sans:size=11", "Iosevka Nerd Font:size=12", };
 
 static const char normbordercolor[]	= "#999999";
 static const char normbgcolor[]		= "#cce5e5";
@@ -30,8 +30,8 @@ static const char selfgcolor[]		= "#5294e2";
 static const unsigned int baralpha = 0xE5;
 static const unsigned int borderalpha = OPAQUE;
 
-static const unsigned int alphas[][3]      = {
-	/*               fg      bg        border     */
+static const unsigned int alphas[][3]	   = {
+	/*				 fg		 bg		   border	  */
 	[SchemeNorm] = { OPAQUE, baralpha, borderalpha },
 	[SchemeSel]  = { OPAQUE, baralpha, borderalpha },
 };
@@ -45,8 +45,8 @@ static const unsigned int alphas[][3]      = {
 75% - BF
 */
 
-static const char *colors[][3]      = {
-	/*					fg				bg				border   */
+static const char *colors[][3]		= {
+	/*					fg				bg				border	 */
 	[SchemeNorm]	= { normfgcolor,	normbgcolor,	normbordercolor },
 	[SchemeSel]		= { selfgcolor,		selbgcolor,		selbordercolor },
 	[SchemeWarn]	= { normfgcolor,	selbgcolor,		selbordercolor },
@@ -54,54 +54,54 @@ static const char *colors[][3]      = {
 	[SchemeHid]		= { normfgcolor,	normbgcolor,	normbordercolor },
 };
 
-/* ﯇  *              */
-static const char *tags[] = { "1  ", "2  ", "3  ", "4  ", "5  ", "6  " };
+/* ﯇  *        */
+static const char *tags[] = { "1  ", "2  ", "3  ", "4  " };
 
 static const Rule rules[] = {
 	/* xprop(1):
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class      			instance    title       tags mask    	iscentered	isfloating	monitor */
+	/* class				instance	title		tags mask		iscentered	isfloating	monitor */
 	{ "Gimp",				NULL,		NULL,		0,				1,			1,		-1 },
 	{ "XCalc",				NULL,		NULL,		0,				1,			1,		-1 },
+	{ "Gnome-calculator",	NULL,		NULL,		0,				1,			1,		-1 },
 	{ "St",					NULL,		NULL,		1 << 0,			0,			0,		-1 },
 	{ "Google-chrome",		NULL,		NULL,		1 << 0,			0,			0,		-1 },
 	{ "Chromium",			NULL,		NULL,		1 << 0,			0,			0,		-1 },
-    { "Firefox",            NULL,       NULL,       1 << 0,         0,			0,      -1 },
-    { "firefox",            NULL,       NULL,       1 << 0,         0,			0,      -1 },
+	{ "Firefox",			NULL,		NULL,		1 << 0,			0,			0,		-1 },
+	{ "firefox",			NULL,		NULL,		1 << 0,			0,			0,		-1 },
 	{ "Min",				NULL,		NULL,		1 << 0,			0,			0,		-1 },
 	{ "Sublime_text",		NULL,		NULL,		1 << 1,			0,			0,		-1 },
-    { "Code - OSS",         NULL,       NULL,       1 << 1,         0,			0,      -1 },
-    { "Gnome-calculator",	NULL,		NULL,		1 << 1,			0,			0,		-1 },
-	{ "Nemo",				NULL,		NULL,		1 << 2,			0,			0,		-1 },
-	{ "Pcmanfm",			NULL,		NULL,		1 << 2,			0,			0,		-1 },
-	{ "Thunar",				NULL,		NULL,		1 << 2,			0,			0,		-1 },
-	{ "Org.gnome.Nautilus",	NULL,		NULL,		1 << 2,			0,			0,		-1 },
-	{ "Transmission-gtk",	NULL,		NULL,		1 << 2,			0,			0,		-1 },
-	{ "Steam",				NULL,		NULL,		1 << 4,			0,			0,		-1 },
-	{ "mpv",				NULL,		NULL,		1 << 5,			0,			0,		-1 },
-	{ "qemu-system-x86_64",	NULL,		NULL,		1 << 6,			1,			1,		-1 },
-	{ "kvm",				NULL,		NULL,		1 << 6,			1,			1,		-1 },
-	{ "VirtualBox",			NULL,		NULL,		1 << 6,			0,			0,		-1 },
-    { "Virt-manager",       NULL,       NULL,       1 << 6,         0,			0,      -1 },
-	{ "DB Browser for SQLite",	NULL,	NULL,		1 << 6,			0,			0,		-1 },
+	{ "Code - OSS",			NULL,		NULL,		1 << 1,			0,			0,		-1 },
+	{ "Gnome-calculator",	NULL,		NULL,		1 << 1,			0,			0,		-1 },
+	{ "Nemo",				NULL,		NULL,		1 << 1,			0,			0,		-1 },
+	{ "Pcmanfm",			NULL,		NULL,		1 << 1,			0,			0,		-1 },
+	{ "Thunar",				NULL,		NULL,		1 << 1,			0,			0,		-1 },
+	{ "Org.gnome.Nautilus",	NULL,		NULL,		1 << 1,			0,			0,		-1 },
+	{ "Transmission-gtk",	NULL,		NULL,		1 << 1,			0,			0,		-1 },
+	{ "Steam",				NULL,		NULL,		1 << 2,			0,			0,		-1 },
+	{ "mpv",				NULL,		NULL,		1 << 2,			0,			0,		-1 },
+	{ "qemu-system-x86_64",	NULL,		NULL,		1 << 4,			1,			1,		-1 },
+	{ "kvm",				NULL,		NULL,		1 << 4,			1,			1,		-1 },
+	{ "VirtualBox",			NULL,		NULL,		1 << 4,			0,			0,		-1 },
+	{ "Virt-manager",		NULL,		NULL,		1 << 4,			0,			0,		-1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
-static const int nmaster     = 1;    /* number of clients in master area */
-static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
+static const float mfact	 = 0.55; /* factor of master area size [0.05..0.95] */
+static const int nmaster	 = 1;	 /* number of clients in master area */
+static const int resizehints = 1;	 /* 1 means respect size hints in tiled resizals */
 
 #include "layout.c"
 #include "fibonacci.c"
 static const Layout layouts[] = {
-	{ "[M]",      monocle }, /* first entry is default */
-	{ "舘",      spiral },
-	{ "舘",      dwindle },
- 	{ "全",      grid },
-	{ "ﰦ",      tile },
-	{ "",      NULL }, /* no layout function means floating behavior */
+	{ "[M]",	  monocle }, /* first entry is default */
+	{ "舘",		 spiral },
+	{ "舘",		 dwindle },
+	{ "全",		 grid },
+	{ "ﰦ",		tile },
+	{ "",		NULL }, /* no layout function means floating behavior */
 };
 
 // moon para brightness
@@ -154,7 +154,7 @@ static Key keys[] = {
 	{ MOD4,				XK_f,		spawn,			{.v = searchcmd } },
 	{ MOD4,				XK_Delete,	spawn,			{.v = clipmenu } },
 	{ 0,				XK_F12,		spawn,			{.v = termcmd } },
-	//{ 0,				XK_F12,		togglescratch,  {.v = scratchpadcmd } },
+	//{ 0,				XK_F12,		togglescratch,	{.v = scratchpadcmd } },
 	{ MOD4,				XK_Return,	spawn,			{.v = termcmd } },
 	//{ MOD4,				XK_Escape,	spawn,			{.v = powermenu } },
 	{ MOD4,				XK_F7,		spawn,			{.v = off_monitor } },
@@ -174,7 +174,7 @@ static Key keys[] = {
 	{ MOD4,				XK_Page_Down,	setmfact,		{.f = -0.05} },		// diminui lateralmente
 	{ MOD4,				XK_Page_Up,		setmfact,		{.f = +0.05} },		// aumenta lateralmente
 	{ MOD4,				XK_z,		zoom,			{0} },
-	//{ MOD4,			    XK_Tab,		view,			{0} },					// alterna entre workspace
+	//{ MOD4,				XK_Tab,		view,			{0} },					// alterna entre workspace
 	{ MOD4,				XK_Tab,		focusstack,		{.i = +1 } },
 	{ MOD4,				XK_j,		focusstack,		{.i = +1 } },			// proxima janela
 	{ MOD1,				XK_Tab,		focusstack,		{.i = +1 } },
