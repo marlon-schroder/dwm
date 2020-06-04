@@ -7,11 +7,11 @@ static const int topbar				= 1;		/* 0 means bottom bar */
 static const char buttonbar[]		= "";
 static const char *fonts[]			= { "Sans:size=11", "Iosevka Nerd Font:size=12", };
 
-static const char normbordercolor[]	= "#272822";
-static const char normbgcolor[]		= "#272822";
+static const char normbordercolor[]	= "#292d3e";
+static const char normbgcolor[]		= "#292d3e";
 static const char normfgcolor[]		= "#c0c0c0";
-static const char selbordercolor[]	= "#315BEF";
-static const char selbgcolor[]		= "#272822";
+static const char selbordercolor[]	= "#66d9ef";
+static const char selbgcolor[]		= "#292d3e";
 static const char selfgcolor[]		= "#ffffff";
 
 static const char *colors[][3]		= {
@@ -181,6 +181,7 @@ static Key keys[] = {
 // Button5 (scroll up)
 static Button buttons[] = {
 	/* click			event mask	button		function		argument */
+	//{ ClkButton,		0,			Button1,	spawn,			{.v = dmenucmd } },
 	{ ClkClientWin,		MOD4,		Button5,	setmfact,		{.f = +0.05} },		// aumenta lateralmente com scroll pra cima
 	{ ClkClientWin,		MOD4,		Button4,	setmfact,		{.f = -0.05} },		// diminui lateralmente com scroll pra baixo
 	{ ClkTagBar,		MOD4,		Button1,	tag,			{0} },				// manda janela para a workspace
